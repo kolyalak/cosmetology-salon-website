@@ -19,13 +19,13 @@
   .navbar-area {
     background-color: #64635f;
     color: #ffffff;
-    height: 15vh;
+    height: 18vh;
     position: relative; /* Контейнер для навбару */
 }
 
 .navbar {
     background-color: #64635f;
-    height: 7vh;
+    height: 8vh;
     padding: 10px 0;
     transition: top 1s ease; /* Плавний перехід */
     position: relative; /* Спочатку не закріплений */
