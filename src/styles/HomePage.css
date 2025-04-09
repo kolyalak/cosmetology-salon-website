@@ -1,0 +1,166 @@
+.homepage {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+body {
+  overflow-x: hidden;
+}
+
+
+.recommended-service {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/face-cleaning.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: black;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.recommended-service .details-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a62323;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.recommended-service .details-button:hover {
+  background-color: #831e1e;
+}
+.services_care {
+  text-align: center;
+  left: -20px;
+  margin: 60px;
+  position: relative;
+}
+
+/* Грід для послуг (2 в рядку) */
+.services-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(486px, 1fr));
+  gap: 60px;
+  margin: 0 auto; /* Центрує контейнер по горизонталі */
+  max-width: 1200px; /* Встановіть максимальну ширину для гріда */
+  box-sizing: border-box;
+}
+
+/* .services-grid {
+  position: static;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(686px, 1fr));
+  gap: 60px;
+  left: 20px;
+  margin: 0 auto;
+  margin-left: 15px;
+  box-sizing: border-box;
+} */
+/* grid-template-columns: repeat(2, 1fr); */
+
+.service-card {
+  background: rgba(9, 106, 32, 0);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.all-services {
+  width: 100%;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(185, 186, 204, 0.5);
+}
+
+.about-center {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+}
+
+.about-center ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-center ul li {
+  margin: 10px 0;
+}
+
+.button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+  text-decoration: none;
+
+}
+
+.button:hover {
+  background-color: darkred;
+  text-decoration: none;
+}
+.about-center {
+  width: 100%;
+  background-color: rgba(185, 186, 204, 0.5);
+  display: flex; /* Встановлює гнучке розташування елементів */
+  align-items: center; /* Вирівнює елементи по вертикалі */
+  justify-content: space-between; /* Між елементами буде простір, зображення буде справа */
+  padding: 20px; /* Додати відступи навколо */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  }
+
+.about-center img {
+  width: 45%; /* Встановлює ширину зображення */
+  object-fit: cover; /* Зберігає пропорції зображення */
+  margin-left: 20px; /* Відступ зліва для зображення */
+  margin-right: 40px;
+  height: 40vh;
+  border-radius: 5%;
+}
+
+.container {
+  width: 50%; 
+  max-width: 1700px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

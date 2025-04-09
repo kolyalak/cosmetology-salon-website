@@ -1,0 +1,22 @@
+.viber-consultation {
+    background-color: #e8f5e9;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 2px solid #007bff;
+  }
+  
+  .viber-consultation p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .viber-consultation a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .viber-consultation a:hover {
+    text-decoration: underline;
+  }
+  

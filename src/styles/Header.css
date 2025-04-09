@@ -1,0 +1,79 @@
+/* .navbar-area {
+    background-color: #fcfbfb;
+    padding: 10px 20px;
+    color: #ffffff;
+    height: 12vh;
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: top 0.3s ease;
+  }
+
+  .navbar {
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+    
+  } */
+  .navbar-area {
+    background-color: #64635f;
+    color: #ffffff;
+    height: 15vh;
+    position: relative; /* Контейнер для навбару */
+}
+
+.navbar {
+    background-color: #64635f;
+    height: 7vh;
+    padding: 10px 0;
+    transition: top 1s ease; /* Плавний перехід */
+    position: relative; /* Спочатку не закріплений */
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь для виділення */
+}
+
+  
+  .top-bar-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    font-size: 14px;
+    
+  }
+  
+  .social-links a {
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  a {
+    color: rgb(11, 4, 45);
+    margin-right: 40px;
+  }
+  a:hover {
+    text-underline-position: below;
+  }
+  .links {
+    text-align: center;
+    bottom: 75px;
+    position: relative;
+    color: #64635f;
+    font-size: x-large;
+    font-weight: 1000;
+    font-family: 'Times New Roman', Times, serif
+    }
+  .logo {
+    margin-top: 10px;
+    bottom: 20px;
+    position: relative;
+
+  }
+  img {
+    scale: 0.6;
+  }

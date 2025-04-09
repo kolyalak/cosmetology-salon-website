@@ -1,0 +1,59 @@
+.service-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:not(.recommended) {
+  width: 486px;
+  height: 275.7px;
+}
+
+.service-card:not(.recommended) .service-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 122px;
+  background: rgba(255, 255, 255, 0);
+  text-align: center;
+  padding: 10px;
+  object-fit: fill;
+}
+.service-content img{
+  scale: 0.1;
+}
+
+.details-button {
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px 16px;
+  background-color: #f07b3f;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #e06625;
+}
+
+/* Рекомендована послуга */
+.service-card.recommended {
+  width: 80%;
+  height: calc(80vh - 200px);
+}
