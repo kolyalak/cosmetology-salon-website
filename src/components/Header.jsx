@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Header.css'
 import Topbar from './Topbar'
-import logoImage from "../assets/logo.jpg"; // Фото процедури
+import logoImage from "../assets/logo.jpg";
 import { Link } from 'react-router-dom';
 
-
-
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   window.onscroll = function () {
     const navbar = document.querySelector('.navbar');
     const navbarArea = document.querySelector('.navbar-area');
@@ -17,18 +17,28 @@ const Header = () => {
     }
   };
 
-  return (
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
+  return (
     <header className="navbar-area">
       <Topbar />
       <div className="navbar">
-        <div className="logo"><img src={logoImage} alt="" /></div>
-        <nav className="links">
-          <Link to="/">Головна</Link>
-          <Link to="/service">Послуги</Link>
-          <Link to="/contact">Контакти</Link>
-        </nav>
+        <div className="logo">
+          <img src={logoImage} alt="" />
+        </div>
 
+        {/* Бургер кнопка */}
+        <div className="burger" onClick={toggleMenu}>
+          ☰
+        </div>
+
+        <nav className={`links ${menuOpen ? 'open' : ''}`}>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Головна</Link>
+          <Link to="/service" onClick={() => setMenuOpen(false)}>Послуги</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>Контакти</Link>
+        </nav>
       </div>
     </header>
   );

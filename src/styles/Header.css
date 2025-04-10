@@ -1,79 +1,203 @@
-/* .navbar-area {
-    background-color: #fcfbfb;
-    padding: 10px 20px;
-    color: #ffffff;
-    height: 12vh;
-    top: 0;
-    position: sticky;
-    z-index: 1000;
-    padding: 10px 0;
-    transition: top 0.3s ease;
-  }
-
-  .navbar {
-    top: 0;
-    position: sticky;
-    z-index: 1000;
-    
-  } */
-  .navbar-area {
-    background-color: #64635f;
-    color: #ffffff;
-    height: 18vh;
-    position: relative; /* Контейнер для навбару */
+.navbar-area {
+  background-color: #64635f;
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar {
-    background-color: #64635f;
-    height: 8vh;
-    padding: 10px 0;
-    transition: top 1s ease; /* Плавний перехід */
-    position: relative; /* Спочатку не закріплений */
-    z-index: 1000;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #64635f;
+  width: 100%;
+  transition: top 0.3s ease;
 }
 
 .navbar.sticky {
-    position: fixed;
-    top: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь для виділення */
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-  
-  .top-bar-area {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 20px;
-    font-size: 14px;
-    
-  }
-  
-  .social-links a {
-    margin-left: 10px;
-    text-decoration: none;
-  }
-  a {
-    color: rgb(11, 4, 45);
-    margin-right: 40px;
-  }
-  a:hover {
-    text-underline-position: below;
-  }
-  .links {
-    text-align: center;
-    bottom: 75px;
-    position: relative;
-    color: #64635f;
-    font-size: x-large;
-    font-weight: 1000;
-    font-family: 'Times New Roman', Times, serif
-    }
-  .logo {
-    margin-top: 10px;
-    bottom: 20px;
-    position: relative;
+.logo img {
+  width: 150px;
+  height: auto;
+}
 
+/* Лінки */
+.links {
+  padding-right: 50px;
+  display: flex;
+  gap: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивність для планшетів і телефонів */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
-  img {
-    scale: 0.6;
+
+  .logo img {
+    max-width: 120px;
+    margin-bottom: 10px;
   }
+
+  .links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .links a {
+    font-size: 1rem;
+  }
+
+  .top-bar-area {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Базові стилі лінків */
+.links {
+  display: flex;
+  gap: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивне меню */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #64635f;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    display: none;
+  }
+
+  .links.open {
+    display: flex;
+  }
+}
+
+/* Стандартні стилі */
+.navbar-area {
+  background-color: #64635f;
+  color: #ffffff;
+  height: 18vh;
+  position: relative;
+}
+
+.navbar {
+  background-color: #64635f;
+  height: 8vh;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Для логотипа */
+.logo img {
+  scale: 0.6;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .navbar-area {
+    height: auto; /* автоматично залежно від контенту */
+  }
+
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  .top-bar-area {
+    display: none; /* Сховати topbar */
+  }
+
+  .links {
+    font-size: 1.2rem;
+    font-weight: bold;
+    gap: 10px;
+  }
+
+  .burger {
+    font-size: 2rem;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 768px) and (orientation: landscape) {
+  .navbar-area {
+    height: auto;
+    padding: 0px 10px;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 5px 10px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .links {
+    font-size: 1rem;
+    gap: 5px;
+  }
+}
