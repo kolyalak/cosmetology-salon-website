@@ -1,37 +1,40 @@
-import React, { useState } from 'react';
-import '../styles/Header.css'
-import Topbar from './Topbar'
+import React, { useState, useEffect } from 'react';
+import '../styles/Header.css';
+import Topbar from './Topbar';
 import logoImage from "../assets/logo.jpg";
 import { Link } from 'react-router-dom';
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
-  window.onscroll = function () {
-    const navbar = document.querySelector('.navbar');
-    const navbarArea = document.querySelector('.navbar-area');
-    if (window.scrollY > navbarArea.offsetHeight) {
-      navbar.classList.add('sticky');
-    } else {
-      navbar.classList.remove('sticky');
-    }
-  };
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbarArea = document.querySelector('.navbar-area');
+      if (window.scrollY > navbarArea.offsetHeight) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className="navbar-area">
       <Topbar />
-      <div className="navbar">
+      <div className={`navbar ${isSticky ? 'sticky' : ''}`}>
         <div className="logo">
-          <img src={logoImage} alt="" />
+          <img src={logoImage} alt="logo" />
         </div>
 
-        {/* Бургер кнопка */}
         <div className="burger" onClick={toggleMenu}>
-          ☰
+          {menuOpen ? <FiX size={30} /> : <FiMenu size={30} />}
         </div>
 
         <nav className={`links ${menuOpen ? 'open' : ''}`}>
