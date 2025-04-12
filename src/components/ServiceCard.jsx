@@ -4,20 +4,14 @@ import '../styles/ServiceCard.css';
 
 const ServiceCard = ({ name, description, details, image, isRecommended }) => {
   return (
-    <div
-      className={`service-card `}
-      style={{ backgroundImage: `url(${image})` }}
-    >
+    <div className={`service-card ${isRecommended ? 'recommended' : ''}`}>
+      <div className="service-image" style={{ backgroundImage: `url(${image})` }}></div>
       <div className="service-content">
         <h3>{name}</h3>
-        
-          <p>{description}</p>
-        
-          <Link to={details} className="details-button">Детальніше</Link>
-        
+        {description && <p>{description}</p>}
+        <Link to={details} className="details-button">Детальніше</Link>
       </div>
     </div>
-
   );
 };
 

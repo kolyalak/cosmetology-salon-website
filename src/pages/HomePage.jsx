@@ -5,7 +5,7 @@ import procedureImage from "../assets/face-cleaning.jpg";
 import massageImage from "../assets/face-massage.jpg";
 import careImage from "../assets/face-care.jpg";
 import peelingImage from "../assets/face-piling.jpg";
-import aboutImage from "../assets/about.jpg"
+import aboutImage from "../assets/about.jpg";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -35,12 +35,12 @@ const HomePage = () => {
         </div>
       </section>
 
-
       <section className="all-services">
         <h2 className="services_care">Послуги:</h2>
         <div className="services-grid">
           {otherServices.map((service, index) => (
-            <ServiceCard key={index} name={service.name} details={service.details} image={service.image} />
+            <ServiceCard key={index} name={service.name} details={service.details} image={service.image}   isRecommended={recommendedService.name === service.name}
+            />
           ))}
         </div>
       </section>
@@ -49,7 +49,7 @@ const HomePage = () => {
         <div className="container">
           <h1>Косметологічний кабінет "Маріанна"</h1>
           <p>Ми пропонуємо послуги косметолога.</p>
-            <p> У нашому косметологічному кабінеті Ви зможете покращити зовнішній вигляд шкіри обличчя:</p>
+          <p> У нашому косметологічному кабінеті Ви зможете покращити зовнішній вигляд шкіри обличчя:</p>
           <ul>
             <li>Омолодити</li>
             <li>Підтягнути</li>
@@ -62,13 +62,11 @@ const HomePage = () => {
         </div>
         <img src={aboutImage} alt="Косметологічний кабінет" />
       </section>
-
     </div>
   );
 };
 
 export default HomePage;
-
 
 // // const faceMassageService = [
 // //   { name: 'Масаж обличчя', details: '/service/2' },
