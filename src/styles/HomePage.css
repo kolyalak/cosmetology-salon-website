@@ -6,7 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-
 .recommended-service {
   position: relative;
   width: 100%;
@@ -15,12 +14,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: left;
-  color: black;
 }
-
+.overlay:hover {
+  background-color: #9f856c84;
+  transition: ease 2s;
+}
 .overlay {
-  background: rgba(0, 0, 0, 0);
-  color: white;
+  font-weight: 600;
+  background: #726c5888;
+  color: rgb(45, 35, 8);
   padding: 40px;
   border-radius: 10px;
   text-align: center;
@@ -30,8 +32,8 @@ body {
 .recommended-service .details-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #a62323;
-  color: white;
+  background-color: #553c2569;
+  color: rgb(41, 7, 7);
   text-decoration: none;
   border-radius: 5px;
   margin-top: 10px;
@@ -39,7 +41,8 @@ body {
 }
 
 .recommended-service .details-button:hover {
-  background-color: #831e1e;
+  background-color: #726c5888;
+  transition: ease 1s;
 }
 .services_care {
   text-align: center;
@@ -52,7 +55,7 @@ body {
 .services-grid {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(486px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(526px, 1fr));
   gap: 60px;
   margin: 0 auto; /* Центрує контейнер по горизонталі */
   max-width: 1200px; /* Встановіть максимальну ширину для гріда */
@@ -87,6 +90,7 @@ body {
   margin-bottom: 10px;
   object-fit: contain;
 }
+
 .service-card img {
   width: 100%;
   height: 100%;
