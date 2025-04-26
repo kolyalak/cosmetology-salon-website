@@ -20,7 +20,7 @@
 }
 
 /* Контент під картинкою */
-.service-content {
+.service-content { 
   padding: 20px;
   text-align: center;
   background-color: #13040412; /* Фон для звичайних карток */
