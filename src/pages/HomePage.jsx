@@ -23,7 +23,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="homepage">
+    <div className="homepage"> 
       <section className="recommended-service">
         <div className="overlay">
           <h2>Рекомендована процедура</h2>
