@@ -25,7 +25,7 @@ const HomePage = () => {
   return (
     <div className="homepage"> 
       <section className="recommended-service"> 
-        <div className="overlay">
+        <div className="overlay"> 
           <h2>Рекомендована процедура</h2>
           <div className="service-content">
             <h2>{recommendedService.name}</h2>
